@@ -1,0 +1,248 @@
+:root {
+  /* ? body */
+  --bg-1: #030303;
+  --bg-3: #272729;
+  --outln-1: #343536; /* regular outline */
+  --outln-2: #818384;
+  /* ! ^^ */
+  /* outline on hover */
+  /* lighter text */
+  /* neutral arrow color */
+
+  /* * =================== */
+
+  /* ? posts */
+  --bg-2: #1a1a1b;
+  --sidebar: #161617;
+  --clr-2: #6f7071; /* header / title text */
+  --clr-1: #d7dadc; /* regular text */
+
+  /* ? votes */
+  --votehover: #2a2a2b;
+  --upvt: #c83701;
+  --dwnvt: #5a74cb;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--clr-1);
+  background: var(--bg-1);
+  overflow-x: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0px;
+  background: var(--bg-2);
+  border: 1px solid var(--outln-1);
+  color: var(--clr-1);
+  user-select: none;
+}
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.logo img {
+  object-fit: contain;
+  margin: 0 auto;
+  cursor: pointer;
+}
+details {
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 10px 10rem 10px 10px;
+}
+details:hover {
+  outline: 1px solid var(--outln-1);
+}
+
+.search {
+  margin: 0 10px;
+}
+
+.icons {
+  font-size: 15px;
+  display: flex;
+  gap: 0.5rem;
+}
+li {
+  margin: auto;
+  padding: 10px;
+}
+.icons li:hover {
+  padding: 10px;
+  background: var(--votehover);
+}
+.icons li:nth-child(3) {
+  column-gap: 1px solid var(--bg-3);
+}
+
+.fa-search {
+  cursor: pointer;
+}
+input[type='text'] {
+  margin-right: 3rem;
+  color: var(--clr-1);
+  outline: 1px solid var(--outln-1);
+  background: var(--bg-3);
+  border-radius: 3px;
+  border: none;
+  width: 35%;
+  padding: 10px;
+}
+input[type='text']:hover {
+  background: var(--bg-2);
+  outline: 1px solid var(--clr-1);
+}
+input[type='text']:focus {
+  border: none;
+}
+
+.profile img {
+  margin: 0 10px;
+  border-radius: 3px;
+  vertical-align: middle;
+  outline: 2px solid var(--outln-1);
+}
+
+.profile {
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.profile:hover {
+  outline: 1px solid var(--outln-1);
+  text-decoration: underline;
+  color: inherit;
+}
+/* body */
+
+.create-post {
+  border-radius: 3px;
+  padding: 10px;
+  background: var(--bg-2);
+  outline: 1px solid var(--outln-1);
+  width: 500px;
+  margin: 20px auto;
+}
+.create-post img {
+  cursor: pointer;
+  outline: 2px solid var(--outln-1);
+  border-radius: 50%;
+}
+.create-post img,
+.create-post i {
+  vertical-align: middle;
+}
+.create-post i {
+  padding: 10px;
+}
+.create-post i:hover {
+  background: var(--bg-3);
+}
+.create-post input[type='text'] {
+  margin: 0 0 0 10px;
+  width: 70%;
+}
+
+.post {
+  border-radius: 3px;
+  cursor: pointer;
+  width: 520px;
+  height: max-content;
+  margin: 20px auto;
+  background: var(--bg-2);
+  border: 1px solid var(--outln-1);
+  text-align: center;
+}
+.post:hover {
+  border: 1px solid var(--outln-2);
+}
+/* vids */
+
+h2 {
+  text-align: left;
+  line-height: 1.1;
+  padding: 0 20px;
+  width: 20ch;
+}
+
+.poster {
+  padding: 0 20px;
+  color: var(--clr-2);
+  text-align: left;
+  font-size: 12px;
+}
+
+video {
+  display: inline;
+  margin: 0 auto;
+  height: 300px;
+  width: 500px;
+  object-fit: contain;
+}
+
+.lower-part {
+  color: var(--clr-2);
+  background-color: var(--sidebar);
+  display: flex;
+  gap: 0.5rem;
+  padding: 5px;
+  letter-spacing: 0.5px;
+  user-select: none;
+  font-size: 13px;
+}
+
+.voting,
+.comments,
+.share {
+  padding: 10px;
+}
+
+.voting:hover,
+.comments:hover,
+.share:hover {
+  cursor: pointer;
+  background: var(--bg-3);
+}
+
+.fa-angle-down,
+.fa-angle-up {
+  padding: 2px;
+}
+.fa-angle-up:hover {
+  background: var(--bg-3);
+  cursor: pointer;
+  color: var(--upvt);
+}
+.fa-angle-down:hover {
+  background: var(--bg-3);
+  cursor: pointer;
+  color: var(--dwnvt);
+}
+
+/* footer */
+footer {
+  background: #ff4500;
+  color: #1a1a1b;
+  display: grid;
+  place-content: center;
+  height: 50%;
+  width: 100%;
+  padding: 100px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
